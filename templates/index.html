@@ -22,19 +22,24 @@
 
 				<!-- Menu -->
 
-
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
+							<div class="logo"><span class=""></span></div>
 							<h2>Hey there! <br>I am Prashanna</h2>
 							<p>A Computer Science Student. </p>
 							<div class="SocialMediaIcons">
-								<a href="https://github.com/Prashanna-Raj-Pandit"><i class="fa-brands fa-linkedin"></i></a>
-								<a href="https://github.com/Prashanna-Raj-Pandit"><i class="fa-brands fa-github"></i></a>
-								<a href=""><i class="fa-brands fa-facebook"></i></a>
-						</div>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									</ul>
 
+						</div>
+						<ul class="actions">
+										<li><a href="#" class="button">Get Cv</a></li>
+									</ul>
 						</div>
 
 					</section>
@@ -45,13 +50,23 @@
 						<!-- One -->
 							<section id="one" class="wrapper spotlight style1">
 								<div class="inner">
-									<a href="#" class="image"><img src="static/images/pic.png" alt="" /></a>
+									<a class="image"><img src="static/images/pic.png" alt="" /></a>
 									<div class="content">
 										<h2 class="major">Research Interest</h2>
+
 										<ul>
 											Artificial Intelligence, Computer Vision, and its implementation in automation, pattern recognition,
 Intrusion detection, and computational biology.
+
 										</ul>
+										<div>
+											<h3>Publication</h3>
+											<h5>Automation of Driving License Test using Computer Vision and Image Processing</h5>
+											<p>Conference: International Conference on Technologies for Computer, Electrical, Electronics &
+Communication (ICT-CEEL 2023)</p>
+											<ul><a href="https://ictceel.khwopaconference.com/uploads/conferencepaper/fullpaper/1037.pdf" class="button">View paper</a></ul>
+										</div>
+
 									</div>
 								</div>
 							</section>
@@ -59,14 +74,22 @@ Intrusion detection, and computational biology.
 						<!-- Two -->
 							<section id="two" class="wrapper alt spotlight style2">
 								<div class="inner">
-									<a href="#" class="image"><img src="static/images/skils.webp" alt="" /></a>
+									<a href="{{url_for('skills')}}" class="image"><img src="static/images/skils.webp" alt="" /></a>
 									<div class="content">
-										<h2 class="major">Skills and Knowledge Areas</h2>
+										<h2 class="major">Skill and Interest Areas</h2>
+
 										<ul>
-											<li>Microprocessor | Computer Architecture | AI | DSA</li>
-											<li>C | C++ | Python</li>
+											<div class="programming-images">
+												<span class="programming"><img src="static/images/python1.png" height="40px" width="40px"></span>
+												<span class="programming"><img src="static/images/c1.png" height="45px" width="45px"></span>
+												<span class="programming"><img src="static/images/cplus.png" height="40px" width="40px"></span>
+												<span class="programming"><img src="static/images/flutter.png" height="40px" width="40px"></span>
+												<span class="programming"><img src="static/images/yolo.png" height="40px" width="40px"></span>
+
+											</div>
+
 										</ul>
-										<a href="#" class="special">Learn more</a>
+										<a href="{{url_for('skills')}}" class="special">more</a>
 									</div>
 								</div>
 							</section>
@@ -79,28 +102,27 @@ Intrusion detection, and computational biology.
 									<h2 class="major">Recent Works</h2>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="static/images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="static/images/conference.jpg" alt="" /></a>
+											<h3 class="major">Attending Conference</h3>
+											<p>Presenting our paper, “Automation of Driving License Test Using Computer Vision and Image Processing” at the esteemed International Conference on Technologies for Computer, Electrical, Electronics and Communication (ICT-CEEL 2023), organized by Khwopa Engineering College and Khwopa College of Engineering in collaboration with IEEE and IEEE PES, held from 11th to 13th October.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="static/images/hackathon.jpg" alt="" /></a>
+											<h3 class="major">attending hackathon</h3>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/pic06.jpg" alt="" /></a>
-											<h3 class="major">Ante fermentum</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
+											<a href="#" class="image"><img src="static/images/uturn.jpg" alt="" /></a>
+											<h3 class="major">Car and sidelight detection by Yolov5</h3>
+											<p>Real-time detection of car and side light with custom object detection model by using YOLOv5</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/pic07.jpg" alt="" /></a>
-											<h3 class="major">Fusce consequat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
+											<a href="#" class="image"><img src="static/images/website.png" alt="" /></a>
+											<h3 class="major">Flutter website</h3>
+											<p> It was my first website which i built using flutter and dart.</p>
+											<a href="https://prashannarajpandit-github-io.onrender.com/#/" class="special">visit website</a>
 										</article>
 									</section>
 									<ul class="actions">
@@ -139,8 +161,10 @@ Intrusion detection, and computational biology.
 
 								<li class="icon solid fa-phone">+977-9844209988</li>
 								<li class="icon solid fa-envelope"><a href="#">Email</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com</a></li>
+								<li class="icon brands fa-facebook-f"><a href="#">facebook</a></li>
+								<li class="icon brands fa-instagram"><a href="#">instagram</a></li>
+								<li class="icon brands fa-github"><a href="#">Github</a></li>
+								<li class="icon solid fa-home"><a href="#">Illinois, USA</a></li>
 							</ul>
 							<ul class="copyright">
 								<li>&copy; Prashanna Raj Pandit. All rights reserved.</li>
