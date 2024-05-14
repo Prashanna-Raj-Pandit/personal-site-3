@@ -31,6 +31,9 @@ body {
 	line-height: 1;
 }
 
+.flash_message{
+color:green
+}
 
 .SocialMediaIcons i{
 margin-right: 30px

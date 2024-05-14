@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-
+{% from "bootstrap5/form.html" import render_form %}
 <html>
 	<head>
 		<title>Prashanna</title>
@@ -17,7 +17,8 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Prashanna Raj</a></h1>
+						<h1><a href="index.html">Prashanna Raj Pandit</a></h1>
+
 					</header>
 
 				<!-- Menu -->
@@ -25,7 +26,21 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<div class="logo"><span class=""></span></div>
+							<div class="logo"><span class=""></span>
+
+								<div class=" container flash_message">
+							  {% with messages = get_flashed_messages() %}
+							  {% if messages %}
+								<div id="flash-messages">
+							  {% for message in messages %}
+							  <p class="flash">{{ message }}</p>
+							  {% endfor %}
+								</div>
+							  {% endif %}
+							  {% endwith %}
+							</div>
+
+							</div>
 							<h2>Hey there! <br>I am Prashanna</h2>
 							<p>A Computer Science Student. </p>
 							<div class="SocialMediaIcons">
@@ -102,31 +117,33 @@ Communication (ICT-CEEL 2023)</p>
 									<h2 class="major">Recent Works</h2>
 									<section class="features">
 										<article>
-											<a href="#" class="image"><img src="static/images/conference.jpg" alt="" /></a>
+											<a class="image"><img src="static/images/conference.jpg" alt="" /></a>
 											<h3 class="major">Attending Conference</h3>
 											<p>Presenting our paper, “Automation of Driving License Test Using Computer Vision and Image Processing” at the esteemed International Conference on Technologies for Computer, Electrical, Electronics and Communication (ICT-CEEL 2023), organized by Khwopa Engineering College and Khwopa College of Engineering in collaboration with IEEE and IEEE PES, held from 11th to 13th October.</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/hackathon.jpg" alt="" /></a>
+											<a class="image"><img src="static/images/hackathon.jpg" alt="" /></a>
 											<h3 class="major">attending hackathon</h3>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/uturn.jpg" alt="" /></a>
+											<a  class="image"><img src="static/images/uturn.jpg" alt="" />
+
+											</a>
 											<h3 class="major">Car and sidelight detection by Yolov5</h3>
 											<p>Real-time detection of car and side light with custom object detection model by using YOLOv5</p>
 											<a href="#" class="special">Learn more</a>
 										</article>
 										<article>
-											<a href="#" class="image"><img src="static/images/website.png" alt="" /></a>
+											<a  class="image"><img src="static/images/website.png" alt="" /></a>
 											<h3 class="major">Flutter website</h3>
 											<p> It was my first website which i built using flutter and dart.</p>
 											<a href="https://prashannarajpandit-github-io.onrender.com/#/" class="special">visit website</a>
 										</article>
 									</section>
 									<ul class="actions">
-										<li><a href="#" class="button">Browse All</a></li>
+										<li><a href="{{url_for('all_recent_work')}}" class="button">Browse All</a></li>
 									</ul>
 								</div>
 							</section>
@@ -138,25 +155,34 @@ Communication (ICT-CEEL 2023)</p>
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 							<p>Feel free to contact me for any queries.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+
+
+							{{render_form(form)}}
+
+
+<!--							<form method="post" action="">-->
+
+<!--								<div class="fields">-->
+<!--									<div class="field">-->
+<!--										<label for="name">Name</label>-->
+<!--										<input type="text" name="name" id="name" />-->
+
+<!--									</div>-->
+<!--									<div class="field">-->
+<!--										<label for="email">Email</label>-->
+<!--										<input type="email" name="email" id="email" />-->
+<!--									</div>-->
+<!--									<div class="field">-->
+<!--										<label for="message">Message</label>-->
+<!--										<textarea name="message" id="message" rows="4"></textarea>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<ul class="actions">-->
+<!--									<li><input type="submit" value="Send Message" /></li>-->
+<!--								</ul>-->
+
+
+<!--							</form>-->
 							<ul class="contact">
 
 
@@ -182,6 +208,16 @@ Communication (ICT-CEEL 2023)</p>
 			<script src="static/assets/js/breakpoints.min.js"></script>
 			<script src="static/assets/js/util.js"></script>
 			<script src="static/assets/js/main.js"></script>
+	<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var flashMessages = document.getElementById('flash-messages');
+                if (flashMessages) {
+                    flashMessages.parentNode.removeChild(flashMessages);
+                }
+            }, 5000); // Remove after 5 seconds (5000 milliseconds)
+        });
+    </script>
 
 	</body>
 </html>
