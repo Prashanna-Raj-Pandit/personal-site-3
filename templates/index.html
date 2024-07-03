@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-{% from "bootstrap5/form.html" import render_form %}
 <html>
 <head>
     <link
@@ -31,44 +30,7 @@
     <!-- Menu -->
 
     <!-- Banner -->
-    <section id="banner">
-        <div class="inner">
-            <div class="logo"><span class=""></span>
-
-                <div class=" container flash_message">
-                    {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                    <div id="flash-messages">
-                        {% for message in messages %}
-                        <p class="flash">{{ message }}</p>
-                        {% endfor %}
-                    </div>
-                    {% endif %}
-                    {% endwith %}
-                </div>
-
-            </div>
-            <h2>Hey there! <br>I am Prashanna</h2>
-            <p>A Computer Science Student. </p>
-            <div class="SocialMediaIcons">
-                <ul class="icons">
-                    <li><a href="https://www.facebook.com/prashanna.raj.5" class="icon brands fa-facebook-f"><span
-                            class="label">Facebook</span></a></li>
-                    <li><a href="https://www.instagram.com/prashannaraj5950" class="icon brands fa-instagram"><span
-                            class="label">Instagram</span></a></li>
-                    <li><a href="https://www.linkedin.com/in/prashanna-raj-pandit-1576b7237/"
-                           class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                    <li><a href="https://github.com/Prashanna-Raj-Pandit" class="icon brands fa-github"><span
-                            class="label">GitHub</span></a></li>
-                </ul>
-
-            </div>
-            <ul class="actions">
-                <li><a href="{{url_for('download')}}" class="button">Get Cv</a></li>
-            </ul>
-        </div>
-
-    </section>
+   {% include "banner.html"%}
 
     <!-- Wrapper -->
     <section id="wrapper">
@@ -180,55 +142,7 @@
     </section>
 
     <!-- Footer -->
-    <section id="footer">
-        <div class="inner">
-            <h2 class="major">Get in touch</h2>
-            <p>Feel free to contact me for any queries.</p>
-
-
-            {{render_form(form)}}
-
-
-            <!--							<form method="post" action="">-->
-
-            <!--								<div class="fields">-->
-            <!--									<div class="field">-->
-            <!--										<label for="name">Name</label>-->
-            <!--										<input type="text" name="name" id="name" />-->
-
-            <!--									</div>-->
-            <!--									<div class="field">-->
-            <!--										<label for="email">Email</label>-->
-            <!--										<input type="email" name="email" id="email" />-->
-            <!--									</div>-->
-            <!--									<div class="field">-->
-            <!--										<label for="message">Message</label>-->
-            <!--										<textarea name="message" id="message" rows="4"></textarea>-->
-            <!--									</div>-->
-            <!--								</div>-->
-            <!--								<ul class="actions">-->
-            <!--									<li><input type="submit" value="Send Message" /></li>-->
-            <!--								</ul>-->
-
-
-            <!--							</form>-->
-            <ul class="contact">
-
-
-                <li class="icon solid fa-envelope"><a>prashannaraj5@gmail.com</a></li>
-                <li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/prashanna.raj.5">facebook</a>
-                </li>
-                <li class="icon brands fa-instagram"><a href="https://www.instagram.com/prashannaraj5950">instagram</a>
-                </li>
-                <li class="icon brands fa-github"><a href="https://github.com/Prashanna-Raj-Pandit">Github</a></li>
-
-                <li class="icon solid fa-home"><a>St.Louis, USA</a></li>
-            </ul>
-            <ul class="copyright">
-                <li>&copy; Prashanna Raj Pandit. All rights reserved.</li>
-            </ul>
-        </div>
-    </section>
+   {% include "footer.html"%}
 
 </div>
 
