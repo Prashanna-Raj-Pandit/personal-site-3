@@ -1,221 +1,245 @@
 <!DOCTYPE HTML>
 {% from "bootstrap5/form.html" import render_form %}
 <html>
-	<head>
-		<link
-		  rel="shortcut icon"
-		  type="x-icon"
-		  href="static/images/mylogo.png"
-    	/>
-		<title>Prashanna's Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="static/assets/css/main.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <link
+            rel="shortcut icon"
+            type="x-icon"
+            href="static/images/mylogo.png"
+    />
+    <title>Prashanna's Website</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="static/assets/css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
 
+</head>
+<body class="is-preload">
 
-	</head>
-	<body class="is-preload">
+<!-- Page Wrapper -->
+<div id="page-wrapper">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+    <!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="index.html">Prashanna Raj Pandit</a></h1>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Prashanna Raj Pandit</a></h1>
+    </header>
 
-					</header>
+    <!-- Menu -->
 
-				<!-- Menu -->
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <div class="logo"><span class=""></span>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class=""></span>
+                <div class=" container flash_message">
+                    {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                    <div id="flash-messages">
+                        {% for message in messages %}
+                        <p class="flash">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+                </div>
 
-								<div class=" container flash_message">
-							  {% with messages = get_flashed_messages() %}
-							  {% if messages %}
-								<div id="flash-messages">
-							  {% for message in messages %}
-							  <p class="flash">{{ message }}</p>
-							  {% endfor %}
-								</div>
-							  {% endif %}
-							  {% endwith %}
-							</div>
+            </div>
+            <h2>Hey there! <br>I am Prashanna</h2>
+            <p>A Computer Science Student. </p>
+            <div class="SocialMediaIcons">
+                <ul class="icons">
+                    <li><a href="https://www.facebook.com/prashanna.raj.5" class="icon brands fa-facebook-f"><span
+                            class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/prashannaraj5950" class="icon brands fa-instagram"><span
+                            class="label">Instagram</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/prashanna-raj-pandit-1576b7237/"
+                           class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/Prashanna-Raj-Pandit" class="icon brands fa-github"><span
+                            class="label">GitHub</span></a></li>
+                </ul>
 
-							</div>
-							<h2>Hey there! <br>I am Prashanna</h2>
-							<p>A Computer Science Student. </p>
-							<div class="SocialMediaIcons">
-									<ul class="icons">
-										<li><a href="https://www.facebook.com/prashanna.raj.5" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="https://www.instagram.com/prashannaraj5950" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="https://www.linkedin.com/in/prashanna-raj-pandit-1576b7237/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/Prashanna-Raj-Pandit" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									</ul>
+            </div>
+            <ul class="actions">
+                <li><a href="{{url_for('download')}}" class="button">Get Cv</a></li>
+            </ul>
+        </div>
 
-						</div>
-						<ul class="actions">
-										<li><a href="{{url_for('download')}}" class="button">Get Cv</a></li>
-									</ul>
-						</div>
+    </section>
 
-					</section>
+    <!-- Wrapper -->
+    <section id="wrapper">
 
-				<!-- Wrapper -->
-					<section id="wrapper">
+        <!-- One -->
+        <section id="one" class="wrapper spotlight style1">
+            <div class="inner">
+                <a class="image"><img src="static/images/pic.png" alt=""/></a>
+                <div class="content">
+                    <h2 class="major">Research Interest</h2>
 
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a class="image"><img src="static/images/pic.png" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Research Interest</h2>
+                    <ul>
+                        Artificial Intelligence, Computer Vision, and its implementation in automation, pattern
+                        recognition,
+                        Intrusion detection, and computational biology.
 
-										<ul>
-											Artificial Intelligence, Computer Vision, and its implementation in automation, pattern recognition,
-Intrusion detection, and computational biology.
+                    </ul>
+                    <div>
+                        <h3>Publication</h3>
+                        <h5>Automation of Driving License Test using Computer Vision and Image Processing</h5>
+                        <p>Conference: International Conference on Technologies for Computer, Electrical, Electronics &
+                            Communication (ICT-CEEL 2023)</p>
+                        <ul><a href="https://ictceel.khwopaconference.com/uploads/conferencepaper/fullpaper/1037.pdf"
+                               class="button">View paper</a></ul>
+                    </div>
 
-										</ul>
-										<div>
-											<h3>Publication</h3>
-											<h5>Automation of Driving License Test using Computer Vision and Image Processing</h5>
-											<p>Conference: International Conference on Technologies for Computer, Electrical, Electronics &
-Communication (ICT-CEEL 2023)</p>
-											<ul><a href="https://ictceel.khwopaconference.com/uploads/conferencepaper/fullpaper/1037.pdf" class="button">View paper</a></ul>
-										</div>
+                </div>
+            </div>
+        </section>
 
-									</div>
-								</div>
-							</section>
+        <!-- Two -->
+        <section id="two" class="wrapper alt spotlight style2">
+            <div class="inner">
+                <a href="{{url_for('skills')}}" class="image"><img src="static/images/skils.webp" alt=""/></a>
+                <div class="content">
+                    <h2 class="major">Skill and Interest Areas</h2>
 
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="{{url_for('skills')}}" class="image"><img src="static/images/skils.webp" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Skill and Interest Areas</h2>
+                    <ul>
+                        <div class="programming-images">
+                            <span class="programming"><img src="static/images/python1.png" height="40px"
+                                                           width="40px"></span>
+                            <span class="programming"><img src="static/images/c1.png" height="45px" width="45px"></span>
+                            <span class="programming"><img src="static/images/cplus.png" height="40px"
+                                                           width="40px"></span>
+                            <span class="programming"><img src="static/images/flutter.png" height="40px"
+                                                           width="40px"></span>
+                            <span class="programming"><img src="static/images/yolo.png" height="40px"
+                                                           width="40px"></span>
 
-										<ul>
-											<div class="programming-images">
-												<span class="programming"><img src="static/images/python1.png" height="40px" width="40px"></span>
-												<span class="programming"><img src="static/images/c1.png" height="45px" width="45px"></span>
-												<span class="programming"><img src="static/images/cplus.png" height="40px" width="40px"></span>
-												<span class="programming"><img src="static/images/flutter.png" height="40px" width="40px"></span>
-												<span class="programming"><img src="static/images/yolo.png" height="40px" width="40px"></span>
+                        </div>
 
-											</div>
-
-										</ul>
-										<a href="{{url_for('skills')}}" class="special">more</a>
-									</div>
-								</div>
-							</section>
-
-
-
-						<!-- Four -->
-							<section id="four" class="wrapper alt style1">
-								<div class="inner">
-									<h2 class="major">Recent Works</h2>
-									<section class="features">
-										<article>
-											<a class="image"><img src="static/images/conference.jpg" alt="" /></a>
-											<h3 class="major">Attending Conference</h3>
-											<p>Presenting our paper, “Automation of Driving License Test Using Computer Vision and Image Processing” at the esteemed International Conference on Technologies for Computer, Electrical, Electronics and Communication (ICT-CEEL 2023), organized by Khwopa Engineering College and Khwopa College of Engineering in collaboration with IEEE and IEEE PES, held from 11th to 13th October.</p>
-<!--											<a href="#" class="special">Learn more</a>-->
-										</article>
-										<article>
-											<a class="image"><img src="static/images/hackathon.jpg" alt="" /></a>
-											<h3 class="major">attending hackathon</h3>
-											<p>Our team, Vision Architects, attended a three-day All Nepal Hackathon in the e-governance category. Our project focused on improving the efficiency of the Department of Transport of Nepal by automating the driving license test for four-wheelers by using Computer Vision.</p>
-<!--											<a href="#" class="special">Learn more</a>-->
-										</article>
-										<article>
-											<a  class="image"><img src="static/images/uturn.jpg" alt="" />
-
-											</a>
-											<h3 class="major">Car and sidelight detection by Yolov5</h3>
-											<p>Real-time detection of car and side light with custom object detection model by using YOLOv5</p>
-<!--											<a href="#" class="special">Learn more</a>-->
-										</article>
-										<article>
-											<a  class="image"><img src="static/images/website.png" alt="" /></a>
-											<h3 class="major">Flutter website</h3>
-											<p> It was my first website which I built using flutter and dart.</p>
-											<a href="https://prashannarajpandit-github-io.onrender.com/#/" class="special">visit website</a>
-										</article>
-									</section>
-									<ul class="actions">
-<!--										<li><a href="{{url_for('all_recent_work')}}" class="button">Browse All</a></li>-->
-									</ul>
-								</div>
-							</section>
-
-					</section>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Feel free to contact me for any queries.</p>
+                    </ul>
+                    <a href="{{url_for('skills')}}" class="special">more</a>
+                </div>
+            </div>
+        </section>
 
 
-							{{render_form(form)}}
+        <!-- Four -->
+        <section id="four" class="wrapper alt style1">
+            <div class="inner">
+                <h2 class="major">Recent Activities</h2>
+                <section class="features">
+                    <article>
+                        <a class="image"><img src="static/images/conference.jpg" alt=""/></a>
+                        <h3 class="major">Attending Conference</h3>
+                        <p>Presenting our paper, “Automation of Driving License Test Using Computer Vision and Image
+                            Processing” at the esteemed International Conference on Technologies for Computer,
+                            Electrical, Electronics and Communication (ICT-CEEL 2023), organized by Khwopa Engineering
+                            College and Khwopa College of Engineering in collaboration with IEEE and IEEE PES, held from
+                            11th to 13th October.</p>
+                        <!--											<a href="#" class="special">Learn more</a>-->
+                    </article>
+                    <article>
+                        <a class="image"><img src="static/images/hackathon.jpg" alt=""/></a>
+                        <h3 class="major">attending hackathon</h3>
+                        <p>Our team, Vision Architects, attended a three-day All Nepal Hackathon in the e-governance
+                            category. Our project focused on improving the efficiency of the Department of Transport of
+                            Nepal by automating the driving license test for four-wheelers by using Computer Vision.</p>
+                        <!--											<a href="#" class="special">Learn more</a>-->
+                    </article>
+                    <article>
+                        <a class="image"><img src="static/images/recent_work/u_turn.png" alt=""/>
+                        <a class="image"><img src="static/images/recent_work/carsight_model_graph.png" alt=""/>
+
+                        </a>
+                        <h3 class="major">Car and sidelight detection by Yolov5</h3>
+                        <p>Real-time detection of car and side light with custom object detection model by using
+                            YOLOv5</p>
+                        <!--											<a href="#" class="special">Learn more</a>-->
+                    </article>
+                    <article>
+                        <a class="image"><img src="static/images/recent_work/google_play_store_analysis.png"
+                                              alt=""/></a>
+                        <a class="image"><img src="static/images/recent_work/google_play_store_analysis1.png"
+                                              alt=""/></a>
+                        <h3 class="major">Google Play Store App Analysis</h3>
+                        <!--											<p>Here, We're going to analyse a dataset on the past winners of the Nobel Prize</p>-->
+                        <a href="https://github.com/Prashanna-Raj-Pandit/Analysis-of-dataset-of-Nobel-Prize-Winners"
+                           class="special">GitHub</a>
+                    </article>
+                </section>
+                <ul class="actions">
+                    <li><a href="{{url_for('all_recent_work')}}" class="button">Browse All</a></li>
+                </ul>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <h2 class="major">Get in touch</h2>
+            <p>Feel free to contact me for any queries.</p>
 
 
-<!--							<form method="post" action="">-->
-
-<!--								<div class="fields">-->
-<!--									<div class="field">-->
-<!--										<label for="name">Name</label>-->
-<!--										<input type="text" name="name" id="name" />-->
-
-<!--									</div>-->
-<!--									<div class="field">-->
-<!--										<label for="email">Email</label>-->
-<!--										<input type="email" name="email" id="email" />-->
-<!--									</div>-->
-<!--									<div class="field">-->
-<!--										<label for="message">Message</label>-->
-<!--										<textarea name="message" id="message" rows="4"></textarea>-->
-<!--									</div>-->
-<!--								</div>-->
-<!--								<ul class="actions">-->
-<!--									<li><input type="submit" value="Send Message" /></li>-->
-<!--								</ul>-->
+            {{render_form(form)}}
 
 
-<!--							</form>-->
-							<ul class="contact">
+            <!--							<form method="post" action="">-->
+
+            <!--								<div class="fields">-->
+            <!--									<div class="field">-->
+            <!--										<label for="name">Name</label>-->
+            <!--										<input type="text" name="name" id="name" />-->
+
+            <!--									</div>-->
+            <!--									<div class="field">-->
+            <!--										<label for="email">Email</label>-->
+            <!--										<input type="email" name="email" id="email" />-->
+            <!--									</div>-->
+            <!--									<div class="field">-->
+            <!--										<label for="message">Message</label>-->
+            <!--										<textarea name="message" id="message" rows="4"></textarea>-->
+            <!--									</div>-->
+            <!--								</div>-->
+            <!--								<ul class="actions">-->
+            <!--									<li><input type="submit" value="Send Message" /></li>-->
+            <!--								</ul>-->
 
 
-								<li class="icon solid fa-envelope"><a>prashannaraj5@gmail.com</a></li>
-								<li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/prashanna.raj.5">facebook</a></li>
-								<li class="icon brands fa-instagram"><a href="https://www.instagram.com/prashannaraj5950">instagram</a></li>
-								<li class="icon brands fa-github"><a href="https://github.com/Prashanna-Raj-Pandit">Github</a></li>
+            <!--							</form>-->
+            <ul class="contact">
 
-								<li class="icon solid fa-home"><a>St.Louis, USA</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Prashanna Raj Pandit. All rights reserved.</li>
-							</ul>
-						</div>
-					</section>
 
-			</div>
+                <li class="icon solid fa-envelope"><a>prashannaraj5@gmail.com</a></li>
+                <li class="icon brands fa-facebook-f"><a href="https://www.facebook.com/prashanna.raj.5">facebook</a>
+                </li>
+                <li class="icon brands fa-instagram"><a href="https://www.instagram.com/prashannaraj5950">instagram</a>
+                </li>
+                <li class="icon brands fa-github"><a href="https://github.com/Prashanna-Raj-Pandit">Github</a></li>
 
-		<!-- Scripts -->
-			<script src="static/assets/js/jquery.min.js"></script>
-			<script src="static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="static/assets/js/browser.min.js"></script>
-			<script src="static/assets/js/breakpoints.min.js"></script>
-			<script src="static/assets/js/util.js"></script>
-			<script src="static/assets/js/main.js"></script>
-	<script>
+                <li class="icon solid fa-home"><a>St.Louis, USA</a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Prashanna Raj Pandit. All rights reserved.</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<!-- Scripts -->
+<script src="static/assets/js/jquery.min.js"></script>
+<script src="static/assets/js/jquery.scrollex.min.js"></script>
+<script src="static/assets/js/browser.min.js"></script>
+<script src="static/assets/js/breakpoints.min.js"></script>
+<script src="static/assets/js/util.js"></script>
+<script src="static/assets/js/main.js"></script>
+<script>
         document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
                 var flashMessages = document.getElementById('flash-messages');
@@ -224,7 +248,9 @@ Communication (ICT-CEEL 2023)</p>
                 }
             }, 5000); // Remove after 5 seconds (5000 milliseconds)
         });
-    </script>
 
-	</body>
+
+</script>
+
+</body>
 </html>
