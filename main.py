@@ -58,7 +58,7 @@ def skills():
 
 @app.route('/download')
 def download():
-    return send_from_directory('static', path='files/resume.pdf')
+    return send_from_directory('static', path='files/Resume.pdf')
 
 
 @app.route('/recent_works',methods=['POST','GET'])
