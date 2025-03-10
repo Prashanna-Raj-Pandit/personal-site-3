@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #2F3141; /* Primary background color */
+    color: #ecf0f1;
+    overflow-x: hidden;
+}
+
+.landing {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#ai-nodes {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+}
+
+.inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #4C5D96; /* Highlighted name */
+    text-shadow: 0 0 10px rgba(76, 93, 150, 0.5);
+}
+
+p {
+    font-size: 1.5rem;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+}
+
+.social-icons ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons .icon {
+    font-size: 1.8rem;
+    color: #45558D; /* Icon color */
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons .icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #4C5D96;
+}
+
+.social-icons .label {
+    display: none;
+}
+
+.actions .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #4C5D96;
+    color: #ecf0f1;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.actions .btn:hover {
+    background: #45558D;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(69, 85, 141, 0.5);
+}
+
+.flash-container {
+    margin-bottom: 20px;
+}
+
+#flash-messages {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.flash {
+    font-size: 1rem;
+    color: #e74c3c;
+    margin: 5px 0;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1s; }
+.delay-3 { animation-delay: 1.5s; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .social-icons .icon {
+        font-size: 1.5rem;
+    }
+    .actions .btn {
+        padding: 10px 25px;
+        font-size: 1rem;
+    }
+}

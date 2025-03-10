@@ -4162,3 +4162,76 @@ input, select, textarea {
 		}
 
 	}
+
+
+/* Skills Section Styling */
+.skills-section {
+    margin-bottom: 2em;
+}
+
+.skills-section h3 {
+    font-family: Raleway, Helvetica, sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item img {
+    margin-bottom: 0.5em;
+}
+
+.skill-label {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 736px) {
+    .skills-container {
+        gap: 15px;
+    }
+
+    .skill-item img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .skill-label {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skills-container {
+        justify-content: center;
+    }
+
+    .skill-item {
+        flex: 0 0 30%;
+    }
+}
